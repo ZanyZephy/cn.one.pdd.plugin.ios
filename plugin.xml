@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<plugin id="cn.one.pdd.plugin.uuid-ios" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>UUIDiOSPlugin</name>
+    <description>PDD UUID iOS Plugin</description>
+
+    <js-module name="UUIDiOSPlugin" src="www/UUIDiOSPlugin.js">
+        <clobbers target="cordova.plugins.UUIDiOSPlugin" />
+    </js-module>
+
+    <platform name="ios">
+        <source-file src="src/ios/IOSUUID.m" target-dir="Classes"/>
+        <header-file src="src/ios/IOSUUID.h" target-dir="Classes"/>
+
+        <feature name="UUIDiOSPlugin">
+            <param name="ios-package" value="IOSUUID" />
+        </feature>
+    </platform>
+</plugin>
