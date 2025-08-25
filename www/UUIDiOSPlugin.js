@@ -1,6 +1,6 @@
 var exec = require('cordova/exec');
 
 exports.getUUID = function (success, error) {
-    var serviceName = 'IOSUUID';
+    var serviceName = 'UUIDiOSPlugin';
     exec(success, error, serviceName, 'getUUID', []);
 };
